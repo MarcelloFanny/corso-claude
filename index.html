@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Il mio corso Claude Code</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      background-color: #f5f5f5;
+      color: #222;
+      text-align: center;
+      padding: 0 16px;
+      transition: background-color 0.4s ease;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      line-height: 1.5;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      padding: 12px 28px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      background-color: #222;
+      color: #fff;
+      cursor: pointer;
+      transition: transform 0.1s ease, opacity 0.2s ease;
+    }
+
+    button:hover {
+      opacity: 0.85;
+    }
+
+    button:active {
+      transform: scale(0.96);
+    }
+  </style>
+</head>
+<body>
+  <h1>Il mio corso Claude Code</h1>
+  <p>Benvenuto! In questo corso impareremo a usare Claude Code per scrivere, capire e migliorare il codice in modo più veloce e divertente.</p>
+  <button id="cambia-colore">Cambia colore</button>
+
+  <script>
+    const pulsante = document.getElementById("cambia-colore");
+
+    function coloreCasuale() {
+      // Tonalità casuale con saturazione e luminosità fisse,
+      // così il testo resta sempre leggibile
+      const tonalita = Math.floor(Math.random() * 360);
+      return `hsl(${tonalita}, 70%, 80%)`;
+    }
+
+    pulsante.addEventListener("click", () => {
+      document.body.style.backgroundColor = coloreCasuale();
+    });
+  </script>
+</body>
+</html>
